@@ -1,0 +1,26 @@
+{
+  "auth": "zef:lizmat",
+  "authors": [
+    "Elizabeth Mattijsen"
+  ],
+  "build-depends": [
+  ],
+  "depends": [
+  ],
+  "description": "Provide an immutable List value type",
+  "license": "Artistic-2.0",
+  "name": "ValueList",
+  "perl": "6.c",
+  "provides": {
+    "ValueList": "lib/ValueList.rakumod"
+  },
+  "resources": [
+  ],
+  "source-url": "https://github.com/lizmat/ValueList",
+  "tags": [
+    "UTILS"
+  ],
+  "test-depends": [
+  ],
+  "version": "0.0.1"
+}
