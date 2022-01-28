@@ -2,5 +2,8 @@ Revision history for ValueList
 
 {{$NEXT}}
 
+0.0.2  2022-01-28T11:09:29+01:00
+    - Remove spaces from .raku
+
 0.0.1  2022-01-09T12:40:44+01:00
     - Initial version

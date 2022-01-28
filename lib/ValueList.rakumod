@@ -1,7 +1,7 @@
 # Use nqp ops as if we are in the core
 use nqp;
 
-my class ValueList:ver<0.0.1>:auth<zef:lizmat>
+my class ValueList:ver<0.0.2>:auth<zef:lizmat>
   is IterationBuffer   # get some low level functionality for free
   does Positional      # so we can bind into arrays
   does Iterable        # so it iterates automagically
@@ -63,8 +63,9 @@ my class ValueList:ver<0.0.1>:auth<zef:lizmat>
     # set up stringification forms
     multi method raku(ValueList:D:) {
         (nqp::eqaddr(self.WHAT,ValueList) ?? 'ValueList' !! self.^name)
-          ~ '.new'
-          ~ self.List.raku  # provides ()
+          ~ '.new('
+          ~ self.List.map(*.raku).join(',')
+          ~ ')'
     }
     multi method gist(ValueList:D:) { self.List.gist }
     multi method Str(ValueList:D:)  { self.raku }
