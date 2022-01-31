@@ -1,7 +1,3 @@
-use ValueList;
-my @a is ValueList = ^10;
-=finish
-
 use Test;
 use ValueList;
 
