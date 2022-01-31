@@ -25,4 +25,4 @@ jobs:
         with:
           raku-version: ${{ matrix.raku-version }}
       - name: Run Tests
-        run: raku -I. t/01-basic.rakutest
+        run: raku --ll-exception -I. t/01-basic.rakutest
