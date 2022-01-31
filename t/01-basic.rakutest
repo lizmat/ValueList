@@ -1,6 +1,5 @@
 use ValueList;
 my @a is ValueList = ^10;
-my @b is ValueList = ^10;
 =finish
 
 use Test;
