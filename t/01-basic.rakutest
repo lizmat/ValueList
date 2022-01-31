@@ -1,6 +1,9 @@
 use Test;
 use ValueList;
 
+done-testing;
+=finish
+
 plan 23;
 
 my @a is ValueList = ^10;
