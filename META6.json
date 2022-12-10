@@ -18,7 +18,7 @@
   ],
   "source-url": "https://github.com/lizmat/ValueList",
   "tags": [
-    "UTILS"
+    "UTILS", "IMMUTABLE", "VALUETYPE"
   ],
   "test-depends": [
   ],
