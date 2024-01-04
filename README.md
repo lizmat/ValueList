@@ -20,7 +20,7 @@ set( @a, @b );  # elems == 1
 DESCRIPTION
 ===========
 
-The functionality provided by this module, will be provided in language level 6.e and higher. If an implementation of ValueList is already available, loading this module becomes a no-op.
+The functionality provided by this module will be provided in language level 6.e and higher. If an implementation of ValueList is already available, loading this module becomes a no-op.
 
 Raku provides a semi-immutable Positional datatype: List. A `List` can not have any elements added or removed from it. However, since a list **can** contain containers of which the value can be changed, it is not a value type. So you cannot use Lists in data structures such as `Set`s, because each List is considered to be different from any other List, because they are not value types.
 
