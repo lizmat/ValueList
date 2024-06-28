@@ -2,6 +2,12 @@ Revision history for ValueList
 
 {{$NEXT}}
 
+0.0.3  2024-06-29T00:26:10+02:00
+    - Empty ValueLists are False
+    - Add sponsor button
+    - Create separate badges for different OSes
+    - Update copyright year
+
 0.0.2  2022-01-28T11:09:29+01:00
     - Remove spaces from .raku
 

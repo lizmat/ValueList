@@ -1,9 +1,10 @@
 use Test;
 use ValueList;
 
-plan 23;
+plan 26;
 
 my @a is ValueList = ^10;
+is-deeply @a.Bool, True, 'a ValueList with elements is True';
 
 my @b is ValueList = ^10;
 is @b.WHICH, @a.WHICH, 'are @b and @a the same value type';
@@ -44,5 +45,11 @@ dies-ok { .value = 42 for @a.pairs },
   'are iterated pairs also immutable';
 dies-ok { for @a.kv -> \k, \v { v = 42 } },
   'are iterated kv also immutable';
+
+my @g is ValueList;
+is-deeply @g.Bool, False, 'an empty ValueList @g is False';
+
+my $h = ValueList.new;
+is-deeply $h.Bool, False, 'an empty ValueList $h is False';
 
 # vim: expandtab shiftwidth=4

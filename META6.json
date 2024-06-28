@@ -16,11 +16,13 @@
   },
   "resources": [
   ],
-  "source-url": "https://github.com/lizmat/ValueList",
+  "source-url": "https://github.com/lizmat/ValueList.git",
   "tags": [
-    "UTILS", "IMMUTABLE", "VALUETYPE"
+    "UTILS",
+    "IMMUTABLE",
+    "VALUETYPE"
   ],
   "test-depends": [
   ],
-  "version": "0.0.2"
+  "version": "0.0.3"
 }

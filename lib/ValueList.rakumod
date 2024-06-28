@@ -1,7 +1,7 @@
 # Use nqp ops as if we are in the core
 use nqp;
 
-my class ValueList:ver<0.0.2>:auth<zef:lizmat>
+my class ValueList
   is IterationBuffer   # get some low level functionality for free
   does Positional      # so we can bind into arrays
   does Iterable        # so it iterates automagically
@@ -69,6 +69,7 @@ my class ValueList:ver<0.0.2>:auth<zef:lizmat>
     }
     multi method gist(ValueList:D:) { self.List.gist }
     multi method Str(ValueList:D:)  { self.raku }
+    multi method Bool(ValueList:D:)  { nqp::hllbool(nqp::elems(self)) }
 
     method list() { self.List }
     method FLATTENABLE_LIST() is implementation-detail { self }
@@ -142,7 +143,7 @@ deal to me!
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2022 Elizabeth Mattijsen
+Copyright 2022, 2024 Elizabeth Mattijsen
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 
