@@ -1,8 +1,11 @@
 Revision history for ValueList
 
 {{$NEXT}}
+
+0.0.4  2024-09-24T17:22:42+02:00
     - Add sponsor link
     - Fix CI badge for Linux
+    - Fix link to source
     - Remove mention of future inclusion into Raku
 
 0.0.3  2024-06-29T00:26:10+02:00

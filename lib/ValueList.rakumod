@@ -130,7 +130,7 @@ types.
 
 Elizabeth Mattijsen <liz@raku.rocks>
 
-Source can be located at: https://github.com/lizmat/ValuecwListPair .
+Source can be located at: https://github.com/lizmat/ValueList .
 Comments and Pull Requests are welcome.
 
 If you like this module, or what I’m doing more generally, committing to a
