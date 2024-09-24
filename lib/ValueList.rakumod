@@ -92,7 +92,7 @@ my class ValueList
     }
 }
 
-sub EXPORT() {
+my sub EXPORT() {
     CORE::.EXISTS-KEY('ValueList')
       ?? Map.new
       !! Map.new( (ValueList => ValueList) )
@@ -118,10 +118,6 @@ set( @a, @b );  # elems == 1
 =end code
 
 =head1 DESCRIPTION
-
-The functionality provided by this module, will be provided in
-language level 6.e and higher.  If an implementation of ValueList
-is already available, loading this module becomes a no-op.
 
 Raku provides a semi-immutable Positional datatype: List.  A C<List> can
 not have any elements added or removed from it.  However, since a list B<can>
