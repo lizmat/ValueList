@@ -1,6 +1,8 @@
 Revision history for ValueList
 
 {{$NEXT}}
+    - Full coverage testing has been reached
+    - Update copyright year
 
 0.0.4  2024-09-24T17:22:42+02:00
     - Remove mention of future inclusion into Raku

@@ -85,7 +85,7 @@ my class ValueList
     # methods that are not allowed on immutable things
     BEGIN for <
       ASSIGN-POS BIND-POS push append pop shift unshift prepend
-    > -> $method {
+    > -> $method {  # UNCOVERABLE
         ValueList.^add_method: $method, method (ValueList:D: |) {
             X::Immutable.new(:$method, typename => self.^name).throw
         }

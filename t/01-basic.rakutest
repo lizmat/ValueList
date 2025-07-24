@@ -1,7 +1,7 @@
 use Test;
 use ValueList;
 
-plan 26;
+plan 31;
 
 my @a is ValueList = ^10;
 is-deeply @a.Bool, True, 'a ValueList with elements is True';
@@ -27,6 +27,14 @@ is $f.Str, $f.raku,  'does .Str give the same as .raku';
 dies-ok { @a = 4,5,6 },  'can we not re-assign to a ValueList';
 dies-ok { @a[0] = 42 },  'can we not assign to a ValueList element';
 dies-ok { @a[0] := 42 }, 'can we not bind to a ValueList element';
+
+is-deeply @a.FLATTENABLE_LIST, @a, 'flattens to itself';
+ok @a.roll (elem) @a, 'does roll work';
+ok @a.pick (elem) @a, 'does pick work';
+
+my $capture := @a.Capture;
+isa-ok $capture, Capture, 'could we coerce to a Capture';
+is-deeply $capture.list, @a.List, 'are the positionals ok';
 
 for <
   ASSIGN-POS BIND-POS push append pop shift unshift prepend

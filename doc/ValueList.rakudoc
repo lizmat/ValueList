@@ -7,14 +7,12 @@ ValueList - Provide an immutable List value type
 =head1 SYNOPSIS
 
 =begin code :lang<raku>
-
 use ValueList;
 
 my @a is ValueList = ^10;  # initialization follows single-argument semantics
 my @b is ValueList = ^10;
 
 set( @a, @b );  # elems == 1
-
 =end code
 
 =head1 DESCRIPTION
